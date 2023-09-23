@@ -1,14 +1,18 @@
 import React, { Component, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function LoginPage () {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-  
+    const navigate = useNavigate();
     const handleLogin = () => {
-      // Implement your authentication logic here
-      console.log('Username:', username);
-      console.log('Password:', password);
+      if (username =="admin" && password== "password"){
+        navigate("../home");
+
+
+      }
+
     };
   
   
